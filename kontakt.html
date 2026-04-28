@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Yamaha Music School BiH</title>
+  <meta name="description" content="Kontaktirajte Yamaha Music School Bosna i Hercegovina — V Kozarske brigade 4c, Banja Luka. Tel: +387 65 265 777. Upis i upisi." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hours-table { width: 100%; }
+    .hours-table tr { border-bottom: 1px solid var(--border); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td { padding: 10px 0; font-size: 0.9rem; color: var(--text-2); }
+    .hours-table td:first-child { color: var(--text-1); font-weight: 500; }
+    .hours-table td:last-child { text-align: right; }
+
+    .quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .quick-action {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-1);
+      transition: var(--transition);
+    }
+    .quick-action:hover { background: var(--card-hover); border-color: var(--border-bright); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav scrolled">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-mark">Y</div>
+      <div class="nav__logo-text">Yamaha Music School<br><span>Bosna i Hercegovina</span></div>
+    </a>
+    <ul class="nav__links">
+      <li class="nav__dropdown">
+        <a href="programi.html" class="nav__link nav__dropdown-toggle">Programi</a>
+        <div class="nav__dropdown-menu">
+          <a href="programi.html#najmlade" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎵</div><div class="nav__dropdown-item-text">Za najmlađe<div class="nav__dropdown-item-sub">1,5 – 8 godina</div></div></a>
+          <a href="programi.html#popularni" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎸</div><div class="nav__dropdown-item-text">Popularni tečajevi<div class="nav__dropdown-item-sub">8+ godina</div></div></a>
+          <a href="programi.html#ogsk" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎼</div><div class="nav__dropdown-item-text">Osnovna muzička škola<div class="nav__dropdown-item-sub">Zvanična svjedodžba</div></div></a>
+        </div>
+      </li>
+      <li><a href="rock-school.html" class="nav__link">Rock School</a></li>
+      <li><a href="mentori.html" class="nav__link">Mentori</a></li>
+      <li><a href="kontakt.html" class="nav__link active">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav__cta">Upiši se</a>
+    <button class="nav__hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile">
+  <button class="nav__mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:var(--text-1);background:none;border:none;cursor:pointer;">✕</button>
+  <a href="programi.html" class="nav__mobile-link">Programi</a>
+  <a href="programi.html#najmlade" class="nav__mobile-sub">↳ Za najmlađe</a>
+  <a href="programi.html#popularni" class="nav__mobile-sub">↳ Popularni tečajevi</a>
+  <a href="programi.html#ogsk" class="nav__mobile-sub">↳ Osnovna muzička škola</a>
+  <a href="rock-school.html" class="nav__mobile-link">Rock School</a>
+  <a href="mentori.html" class="nav__mobile-link">Mentori</a>
+  <a href="kontakt.html" class="nav__mobile-link">Kontakt</a>
+  <a href="kontakt.html" class="nav__mobile-cta">Upiši se →</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label" style="justify-content: center;">Stupite u kontakt</div>
+    <h1>Kontakt &amp; <span class="gradient-text">Upis</span></h1>
+    <p>Pošaljite nam poruku, nazovite ili nas posjetite. Upis je moguć u bilo koje vrijeme školske godine.</p>
+  </div>
+</section>
+
+<!-- QUICK ACTIONS -->
+<section style="padding: 0 0 48px;">
+  <div class="container" style="display: flex; justify-content: center;">
+    <div class="quick-actions" style="justify-content: center;">
+      <a href="tel:+38765265777" class="quick-action">
+        <span>📞</span> +387 65 265 777
+      </a>
+      <a href="mailto:placeholder@yms-bih.ba" class="quick-action">
+        <span>✉️</span> E-mail
+      </a>
+      <a href="https://www.google.com/maps/search/V+Kozarske+brigade+4c+Banja+Luka" target="_blank" class="quick-action">
+        <span>📍</span> Prikaži na mapi
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section" style="padding-top: 0;" id="forma">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info -->
+      <div class="contact-info reveal">
+
+        <div>
+          <h3 style="margin-bottom: 32px; color: var(--text-1);">Informacije</h3>
+
+          <div class="contact-block">
+            <div class="contact-block__icon">📍</div>
+            <div>
+              <div class="contact-block__label">Adresa</div>
+              <div class="contact-block__value">
+                V Kozarske brigade 4c<br>
+                Banja Luka, 78000<br>
+                Bosna i Hercegovina
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-block" style="margin-top: 24px;">
+            <div class="contact-block__icon">📞</div>
+            <div>
+              <div class="contact-block__label">Telefon</div>
+              <div class="contact-block__value">
+                <a href="tel:+38765265777">+387 65 265 777</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-block" style="margin-top: 24px;">
+            <div class="contact-block__icon">✉️</div>
+            <div>
+              <div class="contact-block__label">E-mail</div>
+              <div class="contact-block__value">
+                <a href="mailto:placeholder@yms-bih.ba">placeholder@yms-bih.ba</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working hours -->
+        <div style="background: var(--bg-1); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px;">
+          <h4 style="color: var(--text-1); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <span>🕐</span> Radno vrijeme
+          </h4>
+          <table class="hours-table">
+            <tbody>
+              <tr>
+                <td>Ponedjeljak</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+              <tr>
+                <td>Utorak</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+              <tr>
+                <td>Srijeda</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+              <tr>
+                <td>Četvrtak</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+              <tr>
+                <td>Petak</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+              <tr>
+                <td>Subota</td>
+                <td>11:00 – 20:00</td>
+              </tr>
+              <tr>
+                <td>Nedjelja</td>
+                <td style="color: var(--text-3);">Zatvoreno</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Map -->
+        <div>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.2!2d17.1888!3d44.7722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zViBLb3phcnNrZSBicmlnYWRlIDRjLCBCYW5qYSBMdWthIDc4MDAw!5e0!3m2!1shr!2sba!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="YMS BiH lokacija — V Kozarske brigade 4c, Banja Luka">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal reveal-delay-2">
+        <h3 style="margin-bottom: 32px; color: var(--text-1);">Pošaljite poruku</h3>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ime">Ime</label>
+              <input type="text" id="ime" name="ime" placeholder="Vaše ime" required />
+            </div>
+            <div class="form-group">
+              <label for="prezime">Prezime</label>
+              <input type="text" id="prezime" name="prezime" placeholder="Vaše prezime" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail adresa</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefon (opcionalno)</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+387 ..." />
+          </div>
+
+          <div class="form-group">
+            <label for="program">Interes</label>
+            <select id="program" name="program">
+              <option value="">— Odaberite program —</option>
+              <optgroup label="Za najmlađe (1,5–8g)">
+                <option>Robbie (4–18 mj.)</option>
+                <option>Hobby (1,5–4g)</option>
+                <option>Music Parade (4–6g)</option>
+                <option>Music Adventure (6–8g)</option>
+              </optgroup>
+              <optgroup label="Popularni tečajevi (8+)">
+                <option>Pjevanje – Class Vocals</option>
+                <option>Bubnjevi – Drum Encounters</option>
+                <option>Gitara – Guitar / Classical / Six Strings</option>
+                <option>Klavir – Pianoforte / Play For Keeps</option>
+                <option>Violina</option>
+                <option>Saksofon</option>
+                <option>Bas gitara – Electric Bass</option>
+                <option>Flauta</option>
+              </optgroup>
+              <optgroup label="Posebni programi">
+                <option>Rock School – Horn Section</option>
+                <option>Osnovna muzička škola</option>
+              </optgroup>
+              <option value="ne-znam">Nisam siguran/na — posavetujte me</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="poruka">Poruka</label>
+            <textarea id="poruka" name="poruka" placeholder="Recite nam nešto o sebi ili vašem djetetu — uzrast, prethodno iskustvo, pitanja..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Pošalji poruku
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+
+          <p style="font-size: 0.8rem; color: var(--text-3); margin-top: 12px; text-align: center;">
+            Odgovorimo u roku od 24 sata u radne dane.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background: var(--bg-1); border-top: 1px solid var(--border);">
+  <div class="container" style="max-width: 760px;">
+    <div class="text-center reveal" style="margin-bottom: 48px;">
+      <div class="section-label" style="justify-content: center;">Česta pitanja</div>
+      <h2>FAQ</h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;" class="reveal">
+
+      <details style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <summary style="padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--text-1); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          Mogu li se upisati nakon početka školske godine?
+          <span style="color: var(--accent); font-size: 1.2rem; transition: transform 0.3s;">+</span>
+        </summary>
+        <div style="padding: 0 24px 20px; color: var(--text-2); font-size: 0.9rem; line-height: 1.8;">
+          Da! Upis je moguć u toku cijele godine. Cijena programa se prilagođava prema preostalom broju sati.
+        </div>
+      </details>
+
+      <details style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <summary style="padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--text-1); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          Postoje li probni satovi?
+          <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+        </summary>
+        <div style="padding: 0 24px 20px; color: var(--text-2); font-size: 0.9rem; line-height: 1.8;">
+          Kontaktirajte nas za informacije o probnim satovima — rado ćemo vam omogućiti upoznavanje s mentorom i programom prije upisa.
+        </div>
+      </details>
+
+      <details style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <summary style="padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--text-1); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          Kako funkcionira plaćanje?
+          <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+        </summary>
+        <div style="padding: 0 24px 20px; color: var(--text-2); font-size: 0.9rem; line-height: 1.8;">
+          Školarina je plativa u mjesečnim ratama. Točne informacije o cijenama za aktualnu školsku godinu dobijete na upit — kontaktirajte nas putem forme ili telefona.
+        </div>
+      </details>
+
+      <details style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <summary style="padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--text-1); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          Da li je moguće individualno pohađanje tečajeva?
+          <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+        </summary>
+        <div style="padding: 0 24px 20px; color: var(--text-2); font-size: 0.9rem; line-height: 1.8;">
+          Da! Svi tečajevi dostupni su i individualno, pored grupnog pohađanja. Individualna nastava nudi veću fleksibilnost termina i personaliziran pristup.
+        </div>
+      </details>
+
+      <details style="background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;">
+        <summary style="padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--text-1); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          Koji uzrast je minimalan za upis?
+          <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+        </summary>
+        <div style="padding: 0 24px 20px; color: var(--text-2); font-size: 0.9rem; line-height: 1.8;">
+          Najmlađi program (Robbie) namijenjen je bebama od 4 do 18 mjeseci — zajedno s roditeljima. 
+          Yamaha metoda prati razvoj djeteta od samih početaka.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo"><div class="nav__logo-mark">Y</div><div class="nav__logo-text">Yamaha Music School<br><span>Bosna i Hercegovina</span></div></a>
+        <p style="margin-top:16px;">Muzička škola za sve uzraste. Licencirani YMS mentori u Banja Luci.</p>
+        <div class="footer__social" style="margin-top:20px;">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg-0)"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Programi</h5><a href="programi.html#najmlade">Za najmlađe</a><a href="programi.html#popularni">Popularni 8+</a><a href="programi.html#ogsk">Osnovna muzička škola</a><a href="rock-school.html">Rock School</a></div>
+      <div class="footer__col"><h5>Škola</h5><a href="mentori.html">Mentori</a><a href="kontakt.html">Kontakt</a></div>
+      <div class="footer__col"><h5>Kontakt</h5><a href="tel:+38765265777">+387 65 265 777</a><a href="mailto:placeholder@yms-bih.ba">placeholder@yms-bih.ba</a><p style="margin-top:8px;font-size:0.8rem;">V Kozarske brigade 4c<br>Banja Luka, 78000</p></div>
+    </div>
+    <div class="footer__bottom"><span>© 2025 Yamaha Music School BiH.</span><span>Licencirani distributer za BiH</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
