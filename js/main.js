@@ -4,10 +4,17 @@
 
 /* ---- Nav scroll effect ------------------------------------ */
 const nav = document.querySelector('.nav');
+const hasTransparentHero = document.querySelector('.hero-video-bg') !== null;
+
 if (nav) {
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
+  if (hasTransparentHero) {
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  } else {
+    // Inner pages always keep the scrolled styling
+    nav.classList.add('scrolled');
+  }
 }
 
 /* ---- Active nav link -------------------------------------- */
