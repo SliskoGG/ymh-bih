@@ -202,7 +202,10 @@
       <div class="reveal reveal-delay-2">
         <h3 style="margin-bottom: 32px; color: var(--text-1);">Pošaljite poruku</h3>
 
-        <form class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="8cd6763e-15cf-48f5-a6aa-4a148b1b67a7">
+          <input type="hidden" name="subject" value="Novi upit sa YMS BiH sajta">
+          <input type="hidden" name="from_name" value="YMS BiH Website">
           <div class="form-row">
             <div class="form-group">
               <label for="ime">Ime</label>
