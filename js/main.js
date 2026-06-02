@@ -170,22 +170,42 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
 
-/* ---- Contact form (placeholder) --------------------------- */
+/* ---- Contact form --------------------------- */
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
     const original = btn.textContent;
-    btn.textContent = 'Poruka poslana ✓';
+    btn.textContent = 'Šalje se...';
     btn.style.opacity = '0.7';
     btn.disabled = true;
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        btn.textContent = 'Poruka poslata ✓';
+        contactForm.reset();
+      } else {
+        btn.textContent = 'Greška pri slanju ✕';
+      }
+    } catch (error) {
+      btn.textContent = 'Greška pri slanju ✕';
+    }
+
     setTimeout(() => {
       btn.textContent = original;
       btn.style.opacity = '';
       btn.disabled = false;
-      contactForm.reset();
-    }, 3000);
+    }, 4000);
   });
 }
 
