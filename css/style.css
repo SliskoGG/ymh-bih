@@ -317,9 +317,9 @@ p  { color: var(--text-2); }
 .hero-video-bg {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 2;
   overflow: hidden;
-  background: #0a0a1a;
+  /* No background — fallback gradient shows through until video plays */
 }
 #ytplayer {
   position: absolute;
@@ -340,19 +340,21 @@ p  { color: var(--text-2); }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* Minimal overlay — video dominates, gradient only at bottom for text */
+  /* Balanced overlay — video visible, text readable */
   background: linear-gradient(
     to bottom,
-    rgba(5, 5, 20, 0.04) 0%,
-    rgba(5, 5, 20, 0.02) 30%,
-    rgba(5, 5, 20, 0.55) 100%
+    rgba(5, 5, 20, 0.22) 0%,
+    rgba(5, 5, 20, 0.10) 40%,
+    rgba(5, 5, 20, 0.68) 100%
   );
-  z-index: 1;
+  z-index: 3;
 }
 /* Fallback gradient (shown while video loads or on error) */
 .hero-fallback {
   position: absolute;
   inset: 0;
+  z-index: 1;
+  transition: opacity 1s ease;
   background:
     radial-gradient(ellipse at 20% 40%, rgba(88,101,255,0.55) 0%, transparent 55%),
     radial-gradient(ellipse at 80% 60%, rgba(255,91,129,0.4) 0%, transparent 55%),
@@ -367,7 +369,7 @@ p  { color: var(--text-2); }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   text-align: center;
   max-width: 860px;
   padding: 0 24px;
@@ -410,7 +412,7 @@ p  { color: var(--text-2); }
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;

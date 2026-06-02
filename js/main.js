@@ -70,8 +70,8 @@ initTabs('.programs-tabs');
 function showHeroFallback() {
   const fallback = document.querySelector('.hero-fallback');
   const videoBg  = document.querySelector('.hero-video-bg');
-  if (fallback) fallback.style.display = 'block';
-  if (videoBg)  videoBg.style.display  = 'none';
+  if (fallback) { fallback.style.opacity = '1'; fallback.style.display = 'block'; }
+  if (videoBg)  videoBg.style.display = 'none';
 }
 
 function initYouTubeHero() {
@@ -90,7 +90,8 @@ function initYouTubeHero() {
 
   window.onYouTubeIframeAPIReady = function() {
     clearTimeout(safetyTimer);
-    new YT.Player('ytplayer', {
+
+    const ytPlayer = new YT.Player('ytplayer', {
       videoId: videoId,
       playerVars: {
         autoplay:        1,
@@ -106,22 +107,26 @@ function initYouTubeHero() {
         playsinline:     1,
       },
       events: {
-        onReady: e => e.target.playVideo(),
-        onError: () => {
-          // Covers error 101/150/153 (embedding disabled) and all other errors
-          showHeroFallback();
+        onReady: e => {
+          e.target.playVideo();
+          // Safety: if state=1 never fires (some browsers), reveal after 3s anyway
+          setTimeout(revealVideo, 3000);
         },
+        onError: () => showHeroFallback(),
         onStateChange: e => {
-          if (e.data === 1) {
-            // PLAYING — now safe to reveal the iframe (controls are gone)
-            const player = document.getElementById('ytplayer');
-            if (player) player.classList.add('playing');
-          }
-          // Ended (0) — loop manually as extra fallback
+          // State 1 = playing, state 3 = buffering (video data received — safe to show)
+          if (e.data === 1 || e.data === 3) revealVideo();
           if (e.data === 0) e.target.playVideo();
         }
       }
     });
+
+    function revealVideo() {
+      const iframe   = document.getElementById('ytplayer');
+      const fallback = document.querySelector('.hero-fallback');
+      if (iframe)   iframe.classList.add('playing');
+      if (fallback) fallback.style.opacity = '0';
+    }
   };
 }
 

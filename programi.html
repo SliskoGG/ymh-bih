@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programi — Yamaha Music School BiH</title>
-  <meta name="description" content="Yamaha Music School BiH programi — za najmlađe (1,5-8g), popularni tečajevi 8+, osnovna muzička škola. Svi uzrasti, svi instrumenti." />
+  <meta name="description" content="Yamaha Music School BiH programi — za najmlađe (1,5-8g), popularni kursevi 8+, osnovna muzička škola. Svi uzrasti, svi instrumenti." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -14,15 +14,15 @@
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
       <div class="nav__logo-mark">Y</div>
-      <div class="nav__logo-text">Yamaha Music School<br><span>Bosna i Hercegovina</span></div>
+      <div class="nav__logo-text">Yamaha Music School<br><span>Banjaluka</span></div>
     </a>
     <ul class="nav__links">
       <li class="nav__dropdown">
         <a href="programi.html" class="nav__link nav__dropdown-toggle active">Programi</a>
         <div class="nav__dropdown-menu">
-          <a href="#najmlade" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎵</div><div class="nav__dropdown-item-text">Za najmlađe<div class="nav__dropdown-item-sub">1,5 – 8 godina</div></div></a>
-          <a href="#popularni" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎸</div><div class="nav__dropdown-item-text">Popularni tečajevi<div class="nav__dropdown-item-sub">8+ godina</div></div></a>
-          <a href="#ogsk" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎼</div><div class="nav__dropdown-item-text">Osnovna muzička škola<div class="nav__dropdown-item-sub">Zvanična svjedodžba</div></div></a>
+          <a href="javascript:void(0)" class="nav__dropdown-item" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;"><div class="nav__dropdown-item-icon">🎵</div><div class="nav__dropdown-item-text">Za najmlađe<div class="nav__dropdown-item-sub">1,5 – 8 godina</div></div></a>
+          <a href="#popularni" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎸</div><div class="nav__dropdown-item-text">Popularni kursevi<div class="nav__dropdown-item-sub">8+ godina</div></div></a>
+          <a href="#ogsk" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎼</div><div class="nav__dropdown-item-text">Osnovna muzička škola<div class="nav__dropdown-item-sub">Zvanično svjedočanstvo</div></div></a>
         </div>
       </li>
       <li><a href="rock-school.html" class="nav__link">Rock School</a></li>
@@ -36,8 +36,8 @@
 <div class="nav__mobile">
   <button class="nav__mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:var(--text-1);background:none;border:none;cursor:pointer;">✕</button>
   <a href="programi.html" class="nav__mobile-link">Programi</a>
-  <a href="#najmlade" class="nav__mobile-sub">↳ Za najmlađe (1,5–8g)</a>
-  <a href="#popularni" class="nav__mobile-sub">↳ Popularni tečajevi (8+)</a>
+  <a href="javascript:void(0)" class="nav__mobile-sub" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">↳ Za najmlađe (1,5–8g)</a>
+  <a href="#popularni" class="nav__mobile-sub">↳ Popularni kursevi (8+)</a>
   <a href="#ogsk" class="nav__mobile-sub">↳ Osnovna muzička škola</a>
   <a href="rock-school.html" class="nav__mobile-link">Rock School</a>
   <a href="mentori.html" class="nav__mobile-link">Mentori</a>
@@ -50,7 +50,7 @@
   <div class="container">
     <div class="section-label" style="justify-content:center;">Naši programi</div>
     <h1>Za svaki uzrast <span class="gradient-text">i stil</span></h1>
-    <p>Yamaha metoda — od prvih muzičkih koraka do naprednih tečajeva za tinejdžere i odrasle.</p>
+    <p>Yamaha metoda — od prvih muzičkih koraka do naprednih kurseva za tinejdžere i odrasle.</p>
   </div>
 </section>
 
@@ -58,13 +58,13 @@
 <section class="section" style="padding-top: 48px;">
   <div class="container programs-tabs">
     <div class="tab-bar">
-      <button class="tab-btn active">Za najmlađe</button>
-      <button class="tab-btn">Popularni 8+</button>
+      <button class="tab-btn" title="Dolazi uskoro" disabled style="cursor: not-allowed; opacity: 0.5;">Za najmlađe</button>
+      <button class="tab-btn active">Popularni 8+</button>
       <button class="tab-btn">Osnovna muzička škola</button>
     </div>
 
     <!-- TAB 1: Za najmlađe -->
-    <div class="tab-panel active" id="najmlade">
+    <div class="tab-panel" id="najmlade" style="display: none;">
       <div class="section-label">1,5 – 8 godina</div>
       <h2 class="section-title">Programi za najmlađe</h2>
       <p class="section-sub">
@@ -91,7 +91,7 @@
         <div class="age-card">
           <div class="age-card__badge">6 – 8 godina</div>
           <h3>🌟 Music Adventure</h3>
-          <p>Ozbiljniji susret s klavijaturom i teorijom muzike. Priprema za sve daljnje instrumente.</p>
+          <p>Ozbiljniji susret s klavijaturom i teorijom muzike. Priprema za sve dalje instrumente.</p>
         </div>
       </div>
 
@@ -103,11 +103,11 @@
     </div>
 
     <!-- TAB 2: Popularni 8+ -->
-    <div class="tab-panel" id="popularni">
+    <div class="tab-panel active" id="popularni">
       <div class="section-label">8+ godina</div>
-      <h2 class="section-title">Popularni muzički tečajevi</h2>
+      <h2 class="section-title">Popularni muzički kursevi</h2>
       <p class="section-sub">
-        Yamaha Popular Music Courses — tečajevi za sve uzraste od 8 godina naviše,
+        Yamaha Popular Music Courses — kursevi za sve uzraste od 8 godina naviše,
         u opuštenoj atmosferi uz međunarodno priznatu metodu.
       </p>
 
@@ -193,33 +193,33 @@
 
       <div style="margin-top: 32px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px;">
         <p style="margin-bottom: 4px; color: var(--text-1); font-weight: 600;">Grupni i individualni rad</p>
-        <p>Svi popularni tečajevi dostupni su u malim grupama (4–8 učenika) ili individualno. Kontaktirajte nas za dostupnost pojedinog instrumenta i rasporeda.</p>
+        <p>Svi popularni kursevi dostupni su u malim grupama (4–8 učenika) ili individualno. Kontaktirajte nas za dostupnost pojedinog instrumenta i rasporeda.</p>
         <a href="kontakt.html" style="margin-top: 20px;" class="btn btn-primary btn-sm">Provjeri dostupnost →</a>
       </div>
     </div>
 
     <!-- TAB 3: OGŠ -->
     <div class="tab-panel" id="ogsk">
-      <div class="section-label">Zvanična svjedodžba</div>
+      <div class="section-label">Zvanično svjedočanstvo</div>
       <h2 class="section-title">Program osnovne muzičke škole</h2>
       <p class="section-sub">
         Nastava prema zvaničnom nastavnom planu i programu. Kod ovlaštenih partnera
-        polaže se ispit za osobne potrebe i stječe se zvanična svjedodžba.
+        polaže se ispit za osobne potrebe i stječe se zvanično svjedočanstvo.
       </p>
 
       <div class="instrument-list">
         <div class="instrument-card">
           <div class="instrument-card__emoji">🎹</div>
           <div>
-            <div class="instrument-card__name">Glasovir (Klavir)</div>
-            <div class="instrument-card__sub">Individualna nastava · svjedodžba</div>
+            <div class="instrument-card__name">Klavir</div>
+            <div class="instrument-card__sub">Individualna nastava · svjedočanstvo</div>
           </div>
         </div>
         <div class="instrument-card">
           <div class="instrument-card__emoji">🎸</div>
           <div>
             <div class="instrument-card__name">Gitara</div>
-            <div class="instrument-card__sub">Klasična gitara · svjedodžba</div>
+            <div class="instrument-card__sub">Klasična gitara · svjedočanstvo</div>
           </div>
         </div>
         <div class="instrument-card">
@@ -233,28 +233,28 @@
           <div class="instrument-card__emoji">🎻</div>
           <div>
             <div class="instrument-card__name">Violina</div>
-            <div class="instrument-card__sub">OGŠ program · svjedodžba</div>
+            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
           </div>
         </div>
         <div class="instrument-card">
           <div class="instrument-card__emoji">🎺</div>
           <div>
             <div class="instrument-card__name">Truba</div>
-            <div class="instrument-card__sub">OGŠ program · svjedodžba</div>
+            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
           </div>
         </div>
         <div class="instrument-card">
           <div class="instrument-card__emoji">🎷</div>
           <div>
             <div class="instrument-card__name">Saksofon</div>
-            <div class="instrument-card__sub">OGŠ program · svjedodžba</div>
+            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
           </div>
         </div>
         <div class="instrument-card">
           <div class="instrument-card__emoji">🎺</div>
           <div>
             <div class="instrument-card__name">Trombon</div>
-            <div class="instrument-card__sub">OGŠ program · svjedodžba</div>
+            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
           </div>
         </div>
       </div>
@@ -284,7 +284,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="nav__logo"><div class="nav__logo-mark">Y</div><div class="nav__logo-text">Yamaha Music School<br><span>Bosna i Hercegovina</span></div></a>
+        <a href="index.html" class="nav__logo"><div class="nav__logo-mark">Y</div><div class="nav__logo-text">Yamaha Music School<br><span>Banjaluka</span></div></a>
         <p style="margin-top:16px;">Muzička škola za sve uzraste. Licencirani YMS mentori u Banja Luci.</p>
         <div class="footer__social" style="margin-top:20px;">
           <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
@@ -292,7 +292,7 @@
           <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg-0)"/></svg></a>
         </div>
       </div>
-      <div class="footer__col"><h5>Programi</h5><a href="#najmlade">Za najmlađe</a><a href="#popularni">Popularni 8+</a><a href="#ogsk">Osnovna muzička škola</a><a href="rock-school.html">Rock School</a></div>
+      <div class="footer__col"><h5>Programi</h5><a href="javascript:void(0)" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">Za najmlađe</a><a href="#popularni">Popularni 8+</a><a href="#ogsk">Osnovna muzička škola</a><a href="rock-school.html">Rock School</a></div>
       <div class="footer__col"><h5>Škola</h5><a href="mentori.html">Mentori</a><a href="kontakt.html">Kontakt</a></div>
       <div class="footer__col"><h5>Kontakt</h5><a href="tel:+38765265777">+387 65 265 777</a><a href="mailto:placeholder@yms-bih.ba">placeholder@yms-bih.ba</a></div>
     </div>
