@@ -371,7 +371,7 @@ p  { color: var(--text-2); }
   position: relative;
   z-index: 4;
   text-align: center;
-  max-width: 860px;
+  max-width: 1000px;
   padding: 0 24px;
 }
 .hero-badge {
@@ -391,7 +391,7 @@ p  { color: var(--text-2); }
   margin-bottom: 28px;
 }
 .hero-title {
-  font-size: clamp(2.8rem, 7.5vw, 5.8rem);
+  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
   font-weight: 800;
   line-height: 1.04;
   margin-bottom: 24px;
