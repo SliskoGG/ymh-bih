@@ -163,7 +163,7 @@
     <div class="mentors-list">
 
       <!-- Nenad Mikić -->
-      <div class="mentor-full-card reveal" onclick="toggleMentor(this)">
+      <div id="mentor-nm" class="mentor-full-card reveal" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #5865FF, #7B2FBE);">NM</div>
           <div class="mentor-full-card__info">
@@ -186,7 +186,7 @@
       </div>
 
       <!-- Ivana Radmanović -->
-      <div class="mentor-full-card reveal reveal-delay-1" onclick="toggleMentor(this)">
+      <div id="mentor-ir" class="mentor-full-card reveal reveal-delay-1" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #FF5B81, #A855F7);">IR</div>
           <div class="mentor-full-card__info">
@@ -209,7 +209,7 @@
       </div>
 
       <!-- Sara Ćuković -->
-      <div class="mentor-full-card reveal reveal-delay-2" onclick="toggleMentor(this)">
+      <div id="mentor-sc" class="mentor-full-card reveal reveal-delay-2" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #06B6D4, #5865FF);">SĆ</div>
           <div class="mentor-full-card__info">
@@ -232,7 +232,7 @@
       </div>
 
       <!-- Nataša Đaković -->
-      <div class="mentor-full-card reveal reveal-delay-1" onclick="toggleMentor(this)">
+      <div id="mentor-nd" class="mentor-full-card reveal reveal-delay-1" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">NĐ</div>
           <div class="mentor-full-card__info">
@@ -255,7 +255,7 @@
       </div>
 
       <!-- Mario Zlatinić -->
-      <div class="mentor-full-card reveal reveal-delay-2" onclick="toggleMentor(this)">
+      <div id="mentor-mz" class="mentor-full-card reveal reveal-delay-2" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4);">MZ</div>
           <div class="mentor-full-card__info">
@@ -278,7 +278,7 @@
       </div>
 
       <!-- Luka Radmanović -->
-      <div class="mentor-full-card reveal reveal-delay-1" onclick="toggleMentor(this)">
+      <div id="mentor-lr" class="mentor-full-card reveal reveal-delay-1" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #8B5CF6, #3B82F6);">LR</div>
           <div class="mentor-full-card__info">
@@ -301,7 +301,7 @@
       </div>
 
       <!-- Filip Vukelić -->
-      <div class="mentor-full-card reveal reveal-delay-2" onclick="toggleMentor(this)">
+      <div id="mentor-fv" class="mentor-full-card reveal reveal-delay-2" onclick="toggleMentor(this)">
         <div class="mentor-full-card__top">
           <div class="mentor-full-card__avatar" style="background: linear-gradient(135deg, #EC4899, #F59E0B);">FV</div>
           <div class="mentor-full-card__info">
@@ -368,6 +368,18 @@ function toggleMentor(card) {
   // Open clicked if it wasn't open
   if (!isOpen) card.classList.add('expanded');
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target && target.classList.contains('mentor-full-card')) {
+      toggleMentor(target);
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
+  }
+});
 </script>
 </body>
 </html>
