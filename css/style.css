@@ -214,6 +214,15 @@ p  { color: var(--text-2); }
   pointer-events: none;
   transition: var(--transition);
 }
+/* Invisible bridge to prevent hover loss when moving mouse from toggle to menu */
+.nav__dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
 .nav__dropdown:hover .nav__dropdown-menu {
   opacity: 1;
   pointer-events: all;
