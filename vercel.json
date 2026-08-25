@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/rock-school.html",
+      "destination": "/programi.html",
+      "permanent": true
+    },
+    {
+      "source": "/rock-school",
+      "destination": "/programi.html",
+      "permanent": true
+    }
+  ]
+}

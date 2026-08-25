@@ -4,278 +4,271 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programi — Yamaha Music School Banjaluka</title>
-  <meta name="description" content="Yamaha Music School Banjaluka programi — za najmlađe (1,5-8g), popularni kursevi 8+, osnovna muzička škola. Svi uzrasti, svi instrumenti." />
+  <meta name="description" content="Yamaha Music School Banjaluka programi — popularni kursevi 8+ i osnovna muzička škola. Programi za najmlađe uskoro." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav scrolled">
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
-      <div class="nav__logo-mark">Y</div>
-      <div class="nav__logo-text">Yamaha Music School<br><span>Banjaluka</span></div>
+      <span class="nav__wordmark">
+        <span class="nav__wordmark-brand">Yamaha</span>
+        <span class="nav__wordmark-sub">Music School Banjaluka</span>
+      </span>
     </a>
     <ul class="nav__links">
+      <li><a href="index.html" class="nav__link">Početna</a></li>
+      <li><a href="metoda.html" class="nav__link">Metoda</a></li>
       <li class="nav__dropdown">
-        <a href="programi.html" class="nav__link nav__dropdown-toggle active">Programi</a>
+        <a href="programi.html" class="nav__link nav__dropdown-toggle">Programi</a>
         <div class="nav__dropdown-menu">
-          <a href="javascript:void(0)" class="nav__dropdown-item" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;"><div class="nav__dropdown-item-icon">🎵</div><div class="nav__dropdown-item-text">Za najmlađe<div class="nav__dropdown-item-sub">Uskoro</div></div></a>
-          <a href="#popularni" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎸</div><div class="nav__dropdown-item-text">Popularni kursevi<div class="nav__dropdown-item-sub">8+ godina</div></div></a>
-          <a href="#ogsk" class="nav__dropdown-item"><div class="nav__dropdown-item-icon">🎼</div><div class="nav__dropdown-item-text">Osnovna muzička škola<div class="nav__dropdown-item-sub">Zvanično svjedočanstvo</div></div></a>
+          <a href="javascript:void(0)" class="nav__dropdown-item is-soon" title="Dolazi uskoro">Za najmlađe<div class="nav__dropdown-item-sub">Uskoro</div></a>
+          <a href="#popularni" class="nav__dropdown-item">Popularni kursevi<div class="nav__dropdown-item-sub">8+ godina</div></a>
+          <a href="#ogsk" class="nav__dropdown-item">Osnovna muzička škola<div class="nav__dropdown-item-sub">Zvanično svjedočanstvo</div></a>
         </div>
       </li>
-      <li><a href="rock-school.html" class="nav__link">Rock School</a></li>
       <li><a href="mentori.html" class="nav__link">Mentori</a></li>
       <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
     </ul>
-    <a href="kontakt.html" class="nav__cta">Upiši se</a>
-    <button class="nav__hamburger"><span></span><span></span><span></span></button>
+    <a href="kontakt.html#forma" class="nav__cta">Upiši se</a>
+    <button class="nav__hamburger" aria-label="Otvori meni"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="nav__mobile">
-  <button class="nav__mobile-close" style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:var(--text-1);background:none;border:none;cursor:pointer;">✕</button>
+  <button class="nav__mobile-close" aria-label="Zatvori">✕</button>
+  <a href="index.html" class="nav__mobile-link">Početna</a>
+  <a href="metoda.html" class="nav__mobile-link">Metoda</a>
   <a href="programi.html" class="nav__mobile-link">Programi</a>
-  <a href="javascript:void(0)" class="nav__mobile-sub" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">↳ Za najmlađe (1,5–8g)</a>
+  <a href="javascript:void(0)" class="nav__mobile-sub is-soon">↳ Za najmlađe (Uskoro)</a>
   <a href="#popularni" class="nav__mobile-sub">↳ Popularni kursevi (8+)</a>
   <a href="#ogsk" class="nav__mobile-sub">↳ Osnovna muzička škola</a>
-  <a href="rock-school.html" class="nav__mobile-link">Rock School</a>
   <a href="mentori.html" class="nav__mobile-link">Mentori</a>
   <a href="kontakt.html" class="nav__mobile-link">Kontakt</a>
-  <a href="kontakt.html" class="nav__mobile-cta">Upiši se →</a>
+  <a href="kontakt.html#forma" class="nav__mobile-cta">Upiši se</a>
 </div>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
     <div class="section-label" style="justify-content:center;">Naši programi</div>
-    <h1>Za svaki uzrast <span class="gradient-text">i stil</span></h1>
-    <p>Yamaha metoda — od prvih muzičkih koraka do naprednih kurseva za tinejdžere i odrasle.</p>
+    <h1>Za svaki uzrast i stil</h1>
+    <p>Yamaha metoda — od popularnih kurseva do programa osnovne muzičke škole. Programi za najmlađe stižu uskoro.</p>
   </div>
 </section>
 
-<!-- TAB BAR -->
 <section class="section" style="padding-top: 48px;">
   <div class="container programs-tabs">
     <div class="tab-bar">
-      <button class="tab-btn" title="Dolazi uskoro" disabled style="cursor: not-allowed; opacity: 0.5;">Za najmlađe</button>
-      <button class="tab-btn active">Popularni 8+</button>
-      <button class="tab-btn">Osnovna muzička škola</button>
+      <button class="tab-btn" type="button">Za najmlađe</button>
+      <button class="tab-btn active" type="button">Popularni 8+</button>
+      <button class="tab-btn" type="button">Osnovna muzička škola</button>
     </div>
 
-    <!-- TAB 1: Za najmlađe -->
-    <div class="tab-panel" id="najmlade" style="display: none;">
+    <div class="tab-panel" id="najmlade">
       <div class="section-label">Uskoro</div>
       <h2 class="section-title">Programi za najmlađe</h2>
       <p class="section-sub">
-        Yamaha Music School edukacija kreće od najranije dobi.
-        Svaki program je pažljivo osmišljen za specifičnu razvojnu fazu djeteta.
+        Yamaha edukacija kreće od najranije dobi. Svaki program prati razvojnu fazu djeteta.
+        Trenutno su dostupni programi od 8 godina naviše.
       </p>
-
-      <p>Trenutno su naši programi dostupni za uzrast od 8 godina naviše. Uskoro uvodimo programe i za mlađe uzraste.</p>
-
-      <div style="margin-top: 48px; padding: 32px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg);">
-        <h4 style="margin-bottom: 8px; color: var(--text-1);">Kako se prijaviti?</h4>
-        <p style="margin-bottom: 20px;">Upis je moguć u toku cijele godine. Kontaktirajte nas i dogovorimo probni čas bez obaveza.</p>
-        <a href="kontakt.html" class="btn btn-primary btn-sm">Kontaktiraj nas →</a>
+      <div class="info-box">
+        <h4 style="margin-bottom: 8px;">Kako se prijaviti?</h4>
+        <p style="margin-bottom: 20px;">Upis na dostupne programe (8+) moguć je tokom cijele godine. Kontaktirajte nas za probni čas.</p>
+        <a href="kontakt.html#forma" class="btn btn-primary btn-sm">Kontaktiraj nas →</a>
       </div>
     </div>
 
-    <!-- TAB 2: Popularni 8+ -->
     <div class="tab-panel active" id="popularni">
       <div class="section-label">8+ godina</div>
       <h2 class="section-title">Popularni muzički kursevi</h2>
       <p class="section-sub">
-        Yamaha Popular Music Courses — kursevi za sve uzraste od 8 godina naviše,
+        Yamaha Popular Music Courses — kursevi za uzrast od 8 godina naviše,
         u opuštenoj atmosferi uz međunarodno priznatu metodu.
       </p>
 
+      <div class="feature-photos">
+        <figure class="feature-photo">
+          <img src="img/electric-guitars.jpg" alt="Gitare u školi" />
+          <figcaption class="feature-photo__label">Gitara</figcaption>
+        </figure>
+        <figure class="feature-photo">
+          <img src="img/piano-lesson.jpg" alt="Nastava klavira" />
+          <figcaption class="feature-photo__label">Klavir</figcaption>
+        </figure>
+        <figure class="feature-photo">
+          <img src="img/drums-teen.jpg" alt="Nastava bubnjeva" />
+          <figcaption class="feature-photo__label">Bubnjevi</figcaption>
+        </figure>
+      </div>
+
       <div class="instrument-list">
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎤</div>
-          <div>
-            <div class="instrument-card__name">Class Vocals</div>
-            <div class="instrument-card__sub">Moderno pjevanje</div>
-          </div>
+          <div class="instrument-card__name">Class Vocals</div>
+          <div class="instrument-card__sub">Moderno pjevanje</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🥁</div>
-          <div>
-            <div class="instrument-card__name">Drum Encounters</div>
-            <div class="instrument-card__sub">Bubnjevi</div>
-          </div>
+          <div class="instrument-card__name">Drum Encounters</div>
+          <div class="instrument-card__sub">Bubnjevi</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎸</div>
-          <div>
-            <div class="instrument-card__name">Guitar Encounters</div>
-            <div class="instrument-card__sub">Električna i akustična gitara</div>
-          </div>
+          <div class="instrument-card__name">Guitar Encounters</div>
+          <div class="instrument-card__sub">Električna i akustična gitara</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎸</div>
-          <div>
-            <div class="instrument-card__name">Classical Guitar</div>
-            <div class="instrument-card__sub">Klasična gitara</div>
-          </div>
+          <div class="instrument-card__name">Classical Guitar</div>
+          <div class="instrument-card__sub">Klasična gitara</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎸</div>
-          <div>
-            <div class="instrument-card__name">Six Strings Adventure</div>
-            <div class="instrument-card__sub">Gitara — moderni pristup</div>
-          </div>
+          <div class="instrument-card__name">Six Strings Adventure</div>
+          <div class="instrument-card__sub">Gitara — moderni pristup</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎹</div>
-          <div>
-            <div class="instrument-card__name">Pianoforte</div>
-            <div class="instrument-card__sub">Klavir — moderni pristup</div>
-          </div>
+          <div class="instrument-card__name">Pianoforte</div>
+          <div class="instrument-card__sub">Klavir — moderni pristup</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎹</div>
-          <div>
-            <div class="instrument-card__name">Play For Keeps</div>
-            <div class="instrument-card__sub">Klavijature</div>
-          </div>
+          <div class="instrument-card__name">Play For Keeps</div>
+          <div class="instrument-card__sub">Klavijature</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎻</div>
-          <div>
-            <div class="instrument-card__name">Violin</div>
-            <div class="instrument-card__sub">Violina — na upit</div>
-          </div>
+          <div class="instrument-card__name">Violin</div>
+          <div class="instrument-card__sub">Violina — na upit</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎷</div>
-          <div>
-            <div class="instrument-card__name">Saxophone</div>
-            <div class="instrument-card__sub">Saksofon — na upit</div>
-          </div>
+          <div class="instrument-card__name">Saxophone</div>
+          <div class="instrument-card__sub">Saksofon — na upit</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎵</div>
-          <div>
-            <div class="instrument-card__name">Flute</div>
-            <div class="instrument-card__sub">Flauta — na upit</div>
-          </div>
+          <div class="instrument-card__name">Flute</div>
+          <div class="instrument-card__sub">Flauta — na upit</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎸</div>
-          <div>
-            <div class="instrument-card__name">Electric Bass</div>
-            <div class="instrument-card__sub">Bas gitara</div>
-          </div>
+          <div class="instrument-card__name">Electric Bass</div>
+          <div class="instrument-card__sub">Bas gitara</div>
         </div>
       </div>
 
-      <div style="margin-top: 32px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px;">
+      <div class="info-box">
         <p style="margin-bottom: 4px; color: var(--text-1); font-weight: 600;">Grupni i individualni rad</p>
-        <p>Svi popularni kursevi dostupni su u malim grupama (4–8 učenika) ili individualno. Kontaktirajte nas za dostupnost pojedinog instrumenta i rasporeda.</p>
-        <a href="kontakt.html" style="margin-top: 20px;" class="btn btn-primary btn-sm">Provjeri dostupnost →</a>
+        <p>Svi popularni kursevi dostupni su u malim grupama (4–8 učenika) ili individualno — uključujući odrasle. Kontaktirajte nas za dostupnost instrumenta i rasporeda.</p>
+        <a href="kontakt.html#forma" style="margin-top: 20px;" class="btn btn-primary btn-sm">Provjeri dostupnost →</a>
       </div>
+      <figure class="feature-photo" style="margin-top: 24px; aspect-ratio: 16 / 8;">
+        <img src="img/adults-acoustic.jpg" alt="Djeca s akustičnim gitarama" />
+        <figcaption class="feature-photo__label">Gitara</figcaption>
+      </figure>
     </div>
 
-    <!-- TAB 3: OGŠ -->
     <div class="tab-panel" id="ogsk">
       <div class="section-label">Zvanično svjedočanstvo</div>
       <h2 class="section-title">Program osnovne muzičke škole</h2>
       <p class="section-sub">
         Nastava prema zvaničnom nastavnom planu i programu. Kod ovlaštenih partnera
-        polaže se ispit za osobne potrebe i stječe se zvanično svjedočanstvo.
+        polaže se ispit i stječe se zvanično svjedočanstvo.
       </p>
+
+      <div class="feature-photos" style="grid-template-columns: 1fr 1fr;">
+        <figure class="feature-photo">
+          <img src="img/piano-digitals.jpg" alt="Klavir — OGŠ program" />
+          <figcaption class="feature-photo__label">Klavir</figcaption>
+        </figure>
+        <figure class="feature-photo">
+          <img src="img/lesson-guitar-mentor.jpg" alt="Gitara — OGŠ program" />
+          <figcaption class="feature-photo__label">Gitara</figcaption>
+        </figure>
+      </div>
 
       <div class="instrument-list">
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎹</div>
-          <div>
-            <div class="instrument-card__name">Klavir</div>
-            <div class="instrument-card__sub">Individualna nastava · svjedočanstvo</div>
-          </div>
+          <div class="instrument-card__name">Klavir</div>
+          <div class="instrument-card__sub">Individualna nastava · svjedočanstvo</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎸</div>
-          <div>
-            <div class="instrument-card__name">Gitara</div>
-            <div class="instrument-card__sub">Klasična gitara · svjedočanstvo</div>
-          </div>
+          <div class="instrument-card__name">Gitara</div>
+          <div class="instrument-card__sub">Klasična gitara · svjedočanstvo</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎵</div>
-          <div>
-            <div class="instrument-card__name">Flauta</div>
-            <div class="instrument-card__sub">Tehnička i umjetnička priprema</div>
-          </div>
+          <div class="instrument-card__name">Flauta</div>
+          <div class="instrument-card__sub">Tehnička i umjetnička priprema</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎻</div>
-          <div>
-            <div class="instrument-card__name">Violina</div>
-            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
-          </div>
+          <div class="instrument-card__name">Violina</div>
+          <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎺</div>
-          <div>
-            <div class="instrument-card__name">Truba</div>
-            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
-          </div>
+          <div class="instrument-card__name">Truba</div>
+          <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎷</div>
-          <div>
-            <div class="instrument-card__name">Saksofon</div>
-            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
-          </div>
+          <div class="instrument-card__name">Saksofon</div>
+          <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
         </div>
         <div class="instrument-card">
-          <div class="instrument-card__emoji">🎺</div>
-          <div>
-            <div class="instrument-card__name">Trombon</div>
-            <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
-          </div>
+          <div class="instrument-card__name">Trombon</div>
+          <div class="instrument-card__sub">OGŠ program · svjedočanstvo</div>
         </div>
       </div>
 
-      <div style="margin-top: 32px; background: linear-gradient(135deg, rgba(79,110,247,0.06), rgba(168,85,247,0.04)); border: 1px solid var(--border-bright); border-radius: var(--radius-lg); padding: 32px 40px;">
-        <h4 style="color: var(--text-1); margin-bottom: 8px;">Provjerite dostupnost</h4>
+      <div class="info-box">
+        <h4 style="margin-bottom: 8px;">Provjerite dostupnost</h4>
         <p style="margin-bottom: 20px;">Pišite nam i provjerite koji su predmeti OGŠ programa dostupni u Banja Luci i kada su termini.</p>
-        <a href="kontakt.html" class="btn btn-primary btn-sm">Pišite nam →</a>
+        <a href="kontakt.html#forma" class="btn btn-primary btn-sm">Pišite nam →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="section--sm">
   <div class="container">
     <div class="cta-strip reveal">
       <h2>Ne znate koji program odabrati?</h2>
-      <p>Kontaktirajte nas i zajedno ćemo pronaći idealan program za vas ili vaše dijete.</p>
-      <a href="kontakt.html" class="btn btn-primary">Pitajte nas →</a>
+      <p>Kontaktirajte nas i zajedno ćemo pronaći program za vas ili vaše dijete.</p>
+      <a href="kontakt.html#forma" class="btn-white">Pitajte nas →</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="nav__logo"><div class="nav__logo-mark">Y</div><div class="nav__logo-text">Yamaha Music School<br><span>Banjaluka</span></div></a>
-        <p style="margin-top:16px;">Yamaha Music School - So Cool!!</p>
-        <div class="footer__social" style="margin-top:20px;">
-          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg-0)"/></svg></a>
+        <a href="index.html" class="nav__logo">
+          <span class="nav__wordmark">
+            <span class="nav__wordmark-brand">Yamaha</span>
+            <span class="nav__wordmark-sub">Music School Banjaluka</span>
+          </span>
+        </a>
+        <p class="footer__motto">Let's Play!</p>
+        <p class="footer__tags">#yamahamusicschool &nbsp; #socool</p>
+        <div class="footer__social">
+          <a href="https://www.youtube.com/channel/UCsOGHhHec_pMusw_hFD551A" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#111"/></svg>
+          </a>
         </div>
       </div>
-      <div class="footer__col"><h5>Programi</h5><a href="javascript:void(0)" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">Za najmlađe</a><a href="#popularni">Popularni 8+</a><a href="#ogsk">Osnovna muzička škola</a><a href="rock-school.html">Rock School</a></div>
-      <div class="footer__col"><h5>Škola</h5><a href="mentori.html">Mentori</a><a href="kontakt.html">Kontakt</a></div>
-      <div class="footer__col"><h5>Kontakt</h5><a href="tel:+38765265777">+387 65 265 777</a><a href="mailto:placeholder@yms-bih.ba">placeholder@yms-bih.ba</a></div>
+      <div class="footer__col">
+        <h5>Programi</h5>
+        <span class="is-soon">Za najmlađe (Uskoro)</span>
+        <a href="#popularni">Popularni 8+</a>
+        <a href="#ogsk">Osnovna muzička škola</a>
+      </div>
+      <div class="footer__col">
+        <h5>Škola</h5>
+        <a href="metoda.html">Metoda</a>
+        <a href="yamaha-ispiti.html">Yamaha ispiti</a>
+        <a href="mentori.html">Mentori</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer__col">
+        <h5>Kontakt</h5>
+        <a href="tel:+38765265777">+387 65 265 777</a>
+        <a href="mailto:placeholder@yms-bih.ba">placeholder@yms-bih.ba</a>
+      </div>
     </div>
-    <div class="footer__bottom"><span>© 2025 Yamaha Music School Banjaluka.</span><span>Licencirani distributer za Banjaluku</span></div>
+    <div class="footer__bottom">
+      <span>© 2026 Yamaha Music School Banjaluka.</span>
+      <span>Licencirana Yamaha Music School u Banja Luci</span>
+    </div>
   </div>
 </footer>
 

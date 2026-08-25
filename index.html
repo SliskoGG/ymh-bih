@@ -3,183 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yamaha Music School Banjaluka — Muzika za sve uzraste</title>
-  <meta name="description" content="Yamaha Music School Banjaluka — muzička škola za sve uzraste u Banja Luci. Programi od 4 mjeseca do odrasle dobi. Licencirani YMS mentori." />
+  <title>Yamaha Music School Banjaluka — Let's Play</title>
+  <meta name="description" content="Yamaha Music School Banjaluka — licencirana muzička škola u Banja Luci. Yamaha metoda za uzrast 8+. Let's Play!" />
+  <link rel="preconnect" href="https://www.youtube.com" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- ============================================================
-     NAVIGATION
-     ============================================================ -->
 <nav class="nav">
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
-      <div class="nav__logo-mark">Y</div>
-      <div class="nav__logo-text">
-        Yamaha Music School<br>
-        <span>Banjaluka</span>
-      </div>
+      <span class="nav__wordmark">
+        <span class="nav__wordmark-brand">Yamaha</span>
+        <span class="nav__wordmark-sub">Music School Banjaluka</span>
+      </span>
     </a>
-
     <ul class="nav__links">
+      <li><a href="index.html" class="nav__link">Početna</a></li>
+      <li><a href="metoda.html" class="nav__link">Metoda</a></li>
       <li class="nav__dropdown">
         <a href="programi.html" class="nav__link nav__dropdown-toggle">Programi</a>
         <div class="nav__dropdown-menu">
-          <a href="javascript:void(0)" class="nav__dropdown-item" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">
-            <div class="nav__dropdown-item-icon">🎵</div>
-            <div class="nav__dropdown-item-text">
-              Za najmlađe
-              <div class="nav__dropdown-item-sub">Uskoro</div>
-            </div>
+          <a href="javascript:void(0)" class="nav__dropdown-item is-soon" title="Dolazi uskoro">
+            Za najmlađe
+            <div class="nav__dropdown-item-sub">Uskoro</div>
           </a>
           <a href="programi.html#popularni" class="nav__dropdown-item">
-            <div class="nav__dropdown-item-icon">🎸</div>
-            <div class="nav__dropdown-item-text">
-              Popularni kursevi
-              <div class="nav__dropdown-item-sub">8+ godina</div>
-            </div>
+            Popularni kursevi
+            <div class="nav__dropdown-item-sub">8+ godina</div>
           </a>
           <a href="programi.html#ogsk" class="nav__dropdown-item">
-            <div class="nav__dropdown-item-icon">🎼</div>
-            <div class="nav__dropdown-item-text">
-              Osnovna muzička škola
-              <div class="nav__dropdown-item-sub">Zvanično svjedočanstvo</div>
-            </div>
+            Osnovna muzička škola
+            <div class="nav__dropdown-item-sub">Zvanično svjedočanstvo</div>
           </a>
         </div>
       </li>
-      <li><a href="rock-school.html" class="nav__link">Rock School</a></li>
       <li><a href="mentori.html" class="nav__link">Mentori</a></li>
       <li><a href="kontakt.html" class="nav__link">Kontakt</a></li>
     </ul>
-
-    <a href="kontakt.html" class="nav__cta">Upiši se</a>
-
+    <a href="kontakt.html#forma" class="nav__cta">Upiši se</a>
     <button class="nav__hamburger" aria-label="Otvori meni">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- Mobile nav -->
 <div class="nav__mobile">
-  <button class="nav__mobile-close" aria-label="Zatvori"
-    style="position:absolute;top:24px;right:24px;font-size:1.5rem;color:var(--text-1);background:none;border:none;cursor:pointer;">✕</button>
+  <button class="nav__mobile-close" aria-label="Zatvori">✕</button>
+  <a href="index.html" class="nav__mobile-link">Početna</a>
+  <a href="metoda.html" class="nav__mobile-link">Metoda</a>
   <a href="programi.html" class="nav__mobile-link">Programi</a>
-  <a href="javascript:void(0)" class="nav__mobile-sub" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">↳ Za najmlađe (1,5–8g)</a>
+  <a href="javascript:void(0)" class="nav__mobile-sub is-soon" title="Dolazi uskoro">↳ Za najmlađe (Uskoro)</a>
   <a href="programi.html#popularni" class="nav__mobile-sub">↳ Popularni kursevi (8+)</a>
   <a href="programi.html#ogsk" class="nav__mobile-sub">↳ Osnovna muzička škola</a>
-  <a href="rock-school.html" class="nav__mobile-link">Rock School</a>
   <a href="mentori.html" class="nav__mobile-link">Mentori</a>
   <a href="kontakt.html" class="nav__mobile-link">Kontakt</a>
-  <a href="kontakt.html" class="nav__mobile-cta">Upiši se →</a>
+  <a href="kontakt.html#forma" class="nav__mobile-cta">Upiši se</a>
 </div>
 
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section class="hero" data-ytid="gMFTliKeQrE">
-  <!-- Video background -->
+<section class="hero">
   <div class="hero-video-bg">
-    <div id="ytplayer"></div>
+    <video
+      id="heroVideo"
+      class="hero-video"
+      muted
+      autoplay
+      loop
+      playsinline
+      disablepictureinpicture
+      disableremoteplayback
+      controlslist="nodownload nofullscreen noremoteplayback noplaybackrate"
+      preload="auto"
+      poster="img/hero-poster.jpg"
+      aria-hidden="true">
+      <source src="video/hero.mp4" type="video/mp4" />
+    </video>
   </div>
-  <!-- CSS fallback — always visible until video proves it can play -->
   <div class="hero-fallback"></div>
-  <!-- Dark overlay -->
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <div class="hero-badge">
-      🎵 Yamaha Music School · Banjaluka
-    </div>
-    <h1 class="hero-title">
-      Yamaha Music School<br>
-      <span class="gradient-text">- So Cool!!</span>
-    </h1>
+    <div class="hero-badge">Yamaha Music School · Banjaluka</div>
+    <h1 class="hero-title">Let's Play!</h1>
+    <p class="hero-sub">Muzika je igra za sve generacije. Licencirana Yamaha škola u Banja Luci.</p>
     <div class="hero-actions">
-      <a href="programi.html" class="btn btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        Pronađi program
-      </a>
-      <a href="kontakt.html" class="btn btn-outline">
-        Upiši se
-      </a>
+      <a href="programi.html" class="btn btn-primary">Pronađi program</a>
+      <a href="kontakt.html#forma" class="btn btn-outline">Upiši se</a>
     </div>
   </div>
 
-  <div class="hero-scroll">
+  <div class="hero-scroll" aria-hidden="true">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="6 9 12 15 18 9"/>
     </svg>
   </div>
 </section>
 
-<!-- ============================================================
-     PROGRAMS — AGE CARDS
-     ============================================================ -->
+<a href="yamaha-ispiti.html" class="exam-banner">
+  <img class="exam-banner__img" src="img/adults-acoustic.jpg" alt="Djeca s gitarama — Položite Yamaha ispit" />
+  <div class="exam-banner__veil"></div>
+  <div class="exam-banner__inner">
+    <h2 class="exam-banner__title">Položite Yamaha ispit</h2>
+    <span class="btn btn-outline">Saznaj više</span>
+  </div>
+</a>
+
+<section class="video-block">
+  <div class="container">
+    <div class="video-block__header reveal">
+      <div>
+        <div class="section-label">Video</div>
+        <h2>Let's Play</h2>
+      </div>
+      <a href="https://www.youtube.com/channel/UCsOGHhHec_pMusw_hFD551A" target="_blank" rel="noopener" class="video-block__channel">
+        YouTube kanal →
+      </a>
+    </div>
+    <div class="video-frame reveal">
+      <iframe
+        src="https://www.youtube.com/embed/iO_FdPnQQzU?rel=0&modestbranding=1"
+        allow="encrypted-media; picture-in-picture"
+        allowfullscreen
+        title="Yamaha Music School — Let's Play">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <h2>Pretplatite se na novosti</h2>
+    <p>Primajte obavijesti o upisu, nastupima i školskim vijestima e-mailom.</p>
+    <form action="https://api.web3forms.com/submit" method="POST" class="newsletter-form">
+      <input type="hidden" name="access_key" value="8cd6763e-15cf-48f5-a6aa-4a148b1b67a7">
+      <input type="hidden" name="subject" value="Newsletter pretplata — YMS Banjaluka">
+      <input type="hidden" name="from_name" value="YMS Banjaluka Newsletter">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="email" name="email" placeholder="Email" required aria-label="Email" />
+      <button type="submit">Pretplati me</button>
+    </form>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="text-center reveal">
-      <div class="section-label">Programi</div>
+      <div class="section-label" style="justify-content:center;">Programi</div>
       <h2 class="section-title">Za svaki uzrast i stil</h2>
       <p class="section-sub" style="margin: 0 auto 48px;">
-        Od prvih muzičkih iskustava u ranoj dobi do naprednih kurseva za tinejdžere i odrasle —
-        Yamaha metoda prati svaki korak.
+        Od popularnih kurseva do programa osnovne muzičke škole —
+        Yamaha metoda prati svaki korak. Programi za najmlađe stižu uskoro.
       </p>
     </div>
 
     <div class="programs-grid">
-      <a href="javascript:void(0)" title="Dolazi uskoro" class="card program-card glow-card reveal reveal-delay-1" style="cursor: not-allowed; opacity: 0.7;">
-        <div class="program-card__icon">🎵</div>
-        <div class="program-card__age">Uskoro</div>
-        <h3>Za najmlađe</h3>
-        <p>Programi za mališane i djecu ispod 8 godina biće uskoro dostupni. Pratite nas za više informacija!</p>
-        <span class="program-card__link">
-          Saznaj više
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+      <div class="card program-card is-soon reveal" title="Dolazi uskoro">
+        <div class="program-card__photo program-card__photo--soon">Uskoro</div>
+        <div class="program-card__body">
+          <div class="program-card__age">Uskoro</div>
+          <h3>Za najmlađe</h3>
+          <p>Programi za djecu ispod 8 godina biće uskoro dostupni. Pratite nas za više informacija.</p>
+        </div>
+      </div>
+
+      <a href="programi.html#popularni" class="card program-card reveal reveal-delay-1">
+        <div class="program-card__photo">
+          <img src="img/junior-guitar.jpg" alt="Nastava gitare u Yamaha Music School Banjaluka" />
+        </div>
+        <div class="program-card__body">
+          <div class="program-card__age">8+ godina</div>
+          <h3>Popularni kursevi</h3>
+          <p>Gitara, klavir, pjevanje, bubnjevi i više — moderni instrumenti na Yamaha metodi.</p>
+          <span class="program-card__link">Saznaj više →</span>
+        </div>
       </a>
 
-      <a href="programi.html#popularni" class="card program-card glow-card reveal reveal-delay-2">
-        <div class="program-card__icon">🎸</div>
-        <div class="program-card__age">8+ godina</div>
-        <h3>Popularni kursevi</h3>
-        <p>Gitara, klavir, pjevanje, bubnjevi, violina, saksofon i više — moderni instrumenti na Yamaha metodi.</p>
-        <span class="program-card__link">
-          Saznaj više
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
-
-      <a href="rock-school.html" class="card program-card glow-card reveal reveal-delay-3">
-        <div class="program-card__icon">🎺</div>
-        <div class="program-card__age">8+ godina · RSL UK</div>
-        <h3>Rock School</h3>
-        <p>Međunarodni RSL ispiti ocjenjivani iz Velike Britanije. Program za popularne instrumente.</p>
-        <span class="program-card__link">
-          Saznaj više
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
-
-      <a href="programi.html#ogsk" class="card program-card glow-card reveal reveal-delay-4">
-        <div class="program-card__icon">🎼</div>
-        <div class="program-card__age">Sve dobi · Zvanično svjedočanstvo</div>
-        <h3>Osnovna muzička škola</h3>
-        <p>Nastava prema zvaničnom nastavnom planu uz mogućnost polaganja ispita i dobijanja svjedočanstva.</p>
-        <span class="program-card__link">
-          Saznaj više
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+      <a href="programi.html#ogsk" class="card program-card reveal reveal-delay-2">
+        <div class="program-card__photo">
+          <img src="img/piano-lesson.jpg" alt="Nastava klavira u Yamaha Music School Banjaluka" />
+        </div>
+        <div class="program-card__body">
+          <div class="program-card__age">Zvanično svjedočanstvo</div>
+          <h3>Osnovna muzička škola</h3>
+          <p>Nastava prema zvaničnom nastavnom planu uz mogućnost polaganja ispita i dobijanja svjedočanstva.</p>
+          <span class="program-card__link">Saznaj više →</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     STATS
-     ============================================================ -->
 <section class="section--sm">
   <div class="container">
     <div class="stats-bar reveal">
@@ -196,26 +209,35 @@
         <div class="stat-item__label">licenciranih YMS mentora</div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div style="max-width: 640px; margin: 48px auto 0; text-align: center;" class="reveal">
-      <p style="font-size: 1.1rem; color: var(--text-2); line-height: 1.8;">
-        Strukturirani kurikulum, mali grupni rad i licencirani mentori —
-        učenje muzike koje je <strong style="color:var(--text-1);">zabavno i koje traje</strong>.
-        Yamaha metoda prisutna od 1954. godine u više od 40 zemalja.
-      </p>
+<section class="section" style="padding-top: 32px;">
+  <div class="container">
+    <div class="method-teaser reveal">
+      <div class="method-teaser__photo">
+        <img src="img/group-guitar.jpg" alt="Grupna nastava gitare — Yamaha metoda" />
+      </div>
+      <div class="method-teaser__copy">
+        <div class="section-label">Yamaha metoda</div>
+        <h2 class="section-title">Učenje koje traje</h2>
+        <p style="margin-bottom: 24px;">
+          Strukturirani kurikulum, mali grupni rad i licencirani mentori.
+          Yamaha metoda prisutna je od 1954. u više od 40 zemalja —
+          slušaj, pjevaj, sviraj, čitaj, stvaraj.
+        </p>
+        <a href="metoda.html" class="btn btn-primary btn-sm">Saznaj više o metodi →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     MENTORI CAROUSEL
-     ============================================================ -->
 <section class="carousel-section" style="background: var(--bg-1); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
     <div class="carousel-header reveal">
       <div>
         <div class="section-label">Naš tim</div>
-        <h2 class="section-title" style="margin-bottom: 0;">Učite od najboljih</h2>
+        <h2 class="section-title" style="margin-bottom: 0;">Učite od licenciranih mentora</h2>
       </div>
       <a href="mentori.html" class="btn btn-outline-dark">Svi mentori →</a>
     </div>
@@ -223,88 +245,86 @@
 
   <div class="carousel-wrapper reveal">
     <div class="carousel-track" id="mentorCarousel">
-      <!-- Set 1 -->
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nm'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#5865FF,#7B2FBE);">NM</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nm'">
+        <div class="carousel-card__avatar">NM</div>
         <div class="carousel-card__name">Nenad Mikić</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-ir'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#FF5B81,#A855F7);">IR</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-ir'">
+        <div class="carousel-card__avatar">IR</div>
         <div class="carousel-card__name">Ivana Radmanović</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-sc'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#06B6D4,#5865FF);">SĆ</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-sc'">
+        <div class="carousel-card__avatar">SĆ</div>
         <div class="carousel-card__name">Sara Ćuković</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nd'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">NĐ</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nd'">
+        <div class="carousel-card__avatar">NĐ</div>
         <div class="carousel-card__name">Nataša Đaković</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-mz'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#10B981,#06B6D4);">MZ</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-mz'">
+        <div class="carousel-card__avatar">MZ</div>
         <div class="carousel-card__name">Mario Zlatinić</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-lr'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#8B5CF6,#3B82F6);">LR</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-lr'">
+        <div class="carousel-card__avatar">LR</div>
         <div class="carousel-card__name">Luka Radmanović</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-fv'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#EC4899,#F59E0B);">FV</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-fv'">
+        <div class="carousel-card__avatar">FV</div>
         <div class="carousel-card__name">Filip Vukelić</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <!-- Set 2 — duplicate for seamless loop -->
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nm'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#5865FF,#7B2FBE);">NM</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nm'">
+        <div class="carousel-card__avatar">NM</div>
         <div class="carousel-card__name">Nenad Mikić</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-ir'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#FF5B81,#A855F7);">IR</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-ir'">
+        <div class="carousel-card__avatar">IR</div>
         <div class="carousel-card__name">Ivana Radmanović</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-sc'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#06B6D4,#5865FF);">SĆ</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-sc'">
+        <div class="carousel-card__avatar">SĆ</div>
         <div class="carousel-card__name">Sara Ćuković</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nd'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">NĐ</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-nd'">
+        <div class="carousel-card__avatar">NĐ</div>
         <div class="carousel-card__name">Nataša Đaković</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-mz'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#10B981,#06B6D4);">MZ</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-mz'">
+        <div class="carousel-card__avatar">MZ</div>
         <div class="carousel-card__name">Mario Zlatinić</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-lr'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#8B5CF6,#3B82F6);">LR</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-lr'">
+        <div class="carousel-card__avatar">LR</div>
         <div class="carousel-card__name">Luka Radmanović</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
       </div>
-      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-fv'" style="cursor: pointer;">
-        <div class="carousel-card__avatar initials" style="background:linear-gradient(135deg,#EC4899,#F59E0B);">FV</div>
+      <div class="carousel-card" onclick="window.location.href='mentori.html#mentor-fv'">
+        <div class="carousel-card__avatar">FV</div>
         <div class="carousel-card__name">Filip Vukelić</div>
         <div class="carousel-card__role">YMS Mentor</div>
         <div class="carousel-card__instrument">Muzički pedagog</div>
@@ -314,257 +334,90 @@
 
   <div class="container">
     <div class="carousel-controls">
-      <button class="carousel-btn" id="carouselSlow" title="Uspori">
+      <button class="carousel-btn" id="carouselSlow" title="Uspori" aria-label="Uspori">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
       </button>
-      <button class="carousel-btn" id="carouselPause" title="Pauziraj / Nastavi">
+      <button class="carousel-btn" id="carouselPause" title="Pauziraj / Nastavi" aria-label="Pauziraj">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
       </button>
-      <button class="carousel-btn" id="carouselFast" title="Ubrza">
+      <button class="carousel-btn" id="carouselFast" title="Ubrzaj" aria-label="Ubrzaj">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     VIDEO SHOWCASE (Option 1 — Featured player + playlist)
-     ============================================================ -->
-<section class="video-showcase">
-  <div class="container">
-
-    <div class="video-showcase__header reveal">
-      <div>
-        <div class="section-label">Vidi kako zvučimo</div>
-        <h2>Muzika u akciji</h2>
-      </div>
-      <a href="https://www.youtube.com/channel/UCsOGHhHec_pMusw_hFD551A"
-         target="_blank" rel="noopener" class="video-reel__channel">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0c0c1e"/>
-        </svg>
-        YMS kanal
-      </a>
-    </div>
-
-    <div class="showcase-grid reveal">
-
-      <!-- Featured player -->
-      <div class="showcase-player">
-        <div class="showcase-player__frame">
-          <iframe id="featuredPlayer"
-            src="https://www.youtube.com/embed/TAevdWhoVpE?rel=0&modestbranding=1"
-            allow="autoplay; encrypted-media" allowfullscreen title="YMS video">
-          </iframe>
-        </div>
-        <div class="showcase-player__info">
-          <div class="showcase-player__title" id="featuredTitle">Yamaha Music School — nastup učenika</div>
-          <div class="showcase-player__meta" id="featuredMeta">Yamaha Music School Hrvatska</div>
-        </div>
-      </div>
-
-      <!-- Playlist -->
-      <div class="showcase-playlist" id="showcasePlaylist">
-
-        <div class="playlist-item active" data-video="TAevdWhoVpE" data-title="Yamaha Music School — nastup učenika">
-          <div class="playlist-item__thumb">
-            <img src="https://img.youtube.com/vi/TAevdWhoVpE/hqdefault.jpg" alt="" loading="lazy"/>
-            <div class="playlist-item__play-overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-          </div>
-          <div class="playlist-item__info">
-            <div class="playlist-item__title">Yamaha Music School — nastup učenika</div>
-            <div class="playlist-item__meta">YMS Hrvatska</div>
-            <div class="playlist-item__now-playing">
-              <div class="playing-bars"><span></span><span></span><span></span></div>
-              Reprodukcija
-            </div>
-          </div>
-        </div>
-
-        <div class="playlist-item" data-video="VInui67nt_g" data-title="Yamaha Music School — recital">
-          <div class="playlist-item__thumb">
-            <img src="https://img.youtube.com/vi/VInui67nt_g/hqdefault.jpg" alt="" loading="lazy"/>
-            <div class="playlist-item__play-overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-          </div>
-          <div class="playlist-item__info">
-            <div class="playlist-item__title">Yamaha Music School — recital</div>
-            <div class="playlist-item__meta">YMS Hrvatska</div>
-            <div class="playlist-item__now-playing">
-              <div class="playing-bars"><span></span><span></span><span></span></div>
-              Reprodukcija
-            </div>
-          </div>
-        </div>
-
-        <div class="playlist-item" data-video="Mo6KmMZwsEE" data-title="Yamaha Music School — program">
-          <div class="playlist-item__thumb">
-            <img src="https://img.youtube.com/vi/Mo6KmMZwsEE/hqdefault.jpg" alt="" loading="lazy"/>
-            <div class="playlist-item__play-overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-          </div>
-          <div class="playlist-item__info">
-            <div class="playlist-item__title">Yamaha Music School — program</div>
-            <div class="playlist-item__meta">YMS Hrvatska</div>
-            <div class="playlist-item__now-playing">
-              <div class="playing-bars"><span></span><span></span><span></span></div>
-              Reprodukcija
-            </div>
-          </div>
-        </div>
-
-        <div class="playlist-item" data-video="YDcCBXIQ6BE" data-title="Yamaha Music School — učenici">
-          <div class="playlist-item__thumb">
-            <img src="https://img.youtube.com/vi/YDcCBXIQ6BE/hqdefault.jpg" alt="" loading="lazy"/>
-            <div class="playlist-item__play-overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-          </div>
-          <div class="playlist-item__info">
-            <div class="playlist-item__title">Yamaha Music School — učenici</div>
-            <div class="playlist-item__meta">YMS Hrvatska</div>
-            <div class="playlist-item__now-playing">
-              <div class="playing-bars"><span></span><span></span><span></span></div>
-              Reprodukcija
-            </div>
-          </div>
-        </div>
-
-        <div class="playlist-item" data-video="mP2nnA1spEM" data-title="Yamaha Music School — nastup">
-          <div class="playlist-item__thumb">
-            <img src="https://img.youtube.com/vi/mP2nnA1spEM/hqdefault.jpg" alt="" loading="lazy"/>
-            <div class="playlist-item__play-overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-          </div>
-          <div class="playlist-item__info">
-            <div class="playlist-item__title">Yamaha Music School — nastup</div>
-            <div class="playlist-item__meta">YMS Hrvatska</div>
-            <div class="playlist-item__now-playing">
-              <div class="playing-bars"><span></span><span></span><span></span></div>
-              Reprodukcija
-            </div>
-          </div>
-        </div>
-
-        <div class="playlist-item" data-video="fCPXSstWUjU" data-title="Yamaha Music School — koncert">
-          <div class="playlist-item__thumb">
-            <img src="https://img.youtube.com/vi/fCPXSstWUjU/hqdefault.jpg" alt="" loading="lazy"/>
-            <div class="playlist-item__play-overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-          </div>
-          <div class="playlist-item__info">
-            <div class="playlist-item__title">Yamaha Music School — koncert</div>
-            <div class="playlist-item__meta">YMS Hrvatska</div>
-            <div class="playlist-item__now-playing">
-              <div class="playing-bars"><span></span><span></span><span></span></div>
-              Reprodukcija
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /playlist -->
-    </div><!-- /showcase-grid -->
-  </div>
-</section>
-
-<!-- ============================================================
-     RSL PROMO STRIP
-     ============================================================ -->
 <section class="section">
   <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;" class="reveal">
-      <div style="background: linear-gradient(135deg, rgba(0,201,177,0.07), rgba(88,101,255,0.06)); border: 1px solid rgba(0,201,177,0.2); border-radius: var(--radius-lg); padding: 48px 40px;">
-        <div class="section-label" style="color: var(--accent-4);">Rock School Awards</div>
-        <h3 style="margin-bottom: 16px;">Polažite međunarodne ispite</h3>
-        <p style="margin-bottom: 28px;">
-          Rockschool (RSL) ispiti iz Velike Britanije — vaša izvedba ocjenjuju ispitivači iz UK.
-          Neobavezno, ali vrijedno i prepoznato u cijelom svijetu.
-        </p>
-        <a href="rock-school.html" class="btn btn-outline-dark btn-sm">Saznaj više o RSL →</a>
-      </div>
-
-      <div style="background: linear-gradient(135deg, rgba(255,91,129,0.06), rgba(255,184,0,0.06)); border: 1px solid rgba(255,91,129,0.18); border-radius: var(--radius-lg); padding: 48px 40px;">
-        <div class="section-label" style="color: var(--accent-2);">Yamaha metoda</div>
-        <h3 style="margin-bottom: 16px;">Metoda s 70 godina tradicije</h3>
-        <p style="margin-bottom: 28px;">
-          Strukturirani kurikulum uz knjige i materijale od početnog do profesionalnog nivoa.
-          Individualni i grupni rad — vi birate tempo.
-        </p>
-        <a href="programi.html" class="btn btn-outline-dark btn-sm">Pogledaj programe →</a>
-      </div>
+    <div class="text-center reveal">
+      <div class="section-label" style="justify-content:center;">Škola u Banja Luci</div>
+      <h2 class="section-title">Nastava uživo</h2>
+      <p class="section-sub" style="margin: 0 auto 40px;">
+        Časovi u našoj školi — gitara, klavir, bubnjevi i više.
+      </p>
+    </div>
+    <div class="school-photos reveal">
+      <figure class="school-photo">
+        <img src="img/lesson-wide.jpg" alt="Čas u Yamaha Music School Banjaluka" />
+        <figcaption>Nastava</figcaption>
+      </figure>
+      <figure class="school-photo">
+        <img src="img/piano-digitals.jpg" alt="Klavir i digitalni klaviri Yamaha" />
+        <figcaption>Klavir</figcaption>
+      </figure>
+      <figure class="school-photo">
+        <img src="img/drums-lesson.jpg" alt="Nastava bubnjeva" />
+        <figcaption>Bubnjevi</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     CTA STRIP
-     ============================================================ -->
+</section>
+
 <section class="section--sm">
   <div class="container">
     <div class="cta-strip reveal">
       <div class="section-label" style="justify-content: center; color: rgba(255,255,255,0.7);">Počnite danas</div>
       <h2>Spremni za prvu lekciju?</h2>
       <p>Kontaktirajte nas i upišite se. Upis je moguć u bilo koje vrijeme školske godine.</p>
-      <a href="kontakt.html" class="btn-white">
-        Upiši se
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+      <a href="kontakt.html#forma" class="btn-white">Upiši se →</a>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="index.html" class="nav__logo" style="margin-bottom: 0;">
-          <div class="nav__logo-mark">Y</div>
-          <div class="nav__logo-text">
-            Yamaha Music School<br>
-            <span>Banjaluka</span>
-          </div>
+        <a href="index.html" class="nav__logo">
+          <span class="nav__wordmark">
+            <span class="nav__wordmark-brand">Yamaha</span>
+            <span class="nav__wordmark-sub">Music School Banjaluka</span>
+          </span>
         </a>
-        <p style="margin-top: 16px;">
-          Yamaha Music School - So Cool!!
-        </p>
-        <div class="footer__social" style="margin-top: 20px;">
-          <a href="#" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" aria-label="YouTube">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg-0)"/></svg>
+        <p class="footer__motto">Let's Play!</p>
+        <p class="footer__tags">#yamahamusicschool &nbsp; #socool</p>
+        <div class="footer__social">
+          <a href="https://www.youtube.com/channel/UCsOGHhHec_pMusw_hFD551A" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#111"/></svg>
           </a>
         </div>
       </div>
-
       <div class="footer__col">
         <h5>Programi</h5>
-        <a href="javascript:void(0)" title="Dolazi uskoro" style="cursor: not-allowed; opacity: 0.5;">Za najmlađe (1,5–8g)</a>
+        <span class="is-soon">Za najmlađe (Uskoro)</span>
         <a href="programi.html#popularni">Popularni kursevi 8+</a>
         <a href="programi.html#ogsk">Osnovna muzička škola</a>
-        <a href="rock-school.html">Rock School / RSL</a>
       </div>
-
       <div class="footer__col">
         <h5>Škola</h5>
+        <a href="metoda.html">Metoda</a>
+        <a href="yamaha-ispiti.html">Yamaha ispiti</a>
         <a href="mentori.html">Mentori</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="kontakt.html#forma">Upiši se</a>
       </div>
-
       <div class="footer__col">
         <h5>Kontakt</h5>
         <a href="tel:+38765265777">+387 65 265 777</a>
@@ -572,10 +425,9 @@
         <a href="kontakt.html">V Kozarske brigade 4c<br>Banja Luka, 78000</a>
       </div>
     </div>
-
     <div class="footer__bottom">
-      <span>© 2025 Yamaha Music School Banjaluka. Sva prava zadržana.</span>
-      <span>Licencirani distributer Yamaha Music School za Banjaluku</span>
+      <span>© 2026 Yamaha Music School Banjaluka. Sva prava zadržana.</span>
+      <span>Licencirana Yamaha Music School u Banja Luci</span>
     </div>
   </div>
 </footer>
