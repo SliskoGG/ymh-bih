@@ -152,8 +152,10 @@ function bindAjaxForm(form, sendingLabel, okLabel) {
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
-      btn.textContent = response.ok ? okLabel : 'Greška pri slanju ✕';
-      if (response.ok) form.reset();
+      const result = await response.json().catch(() => ({}));
+      const ok = response.ok && result.success !== false && result.success !== 'false';
+      btn.textContent = ok ? okLabel : 'Greška pri slanju ✕';
+      if (ok) form.reset();
     } catch (error) {
       btn.textContent = 'Greška pri slanju ✕';
     }
