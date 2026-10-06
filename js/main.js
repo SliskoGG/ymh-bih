@@ -137,10 +137,30 @@ document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observ
 
 function bindAjaxForm(form, sendingLabel, okLabel) {
   if (!form) return;
+  const started = Date.now();
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
+    const honey = form.querySelector('[data-honey]');
+    const email = (form.querySelector('input[name="email"]')?.value || '').toLowerCase();
+    const isBot = (honey && honey.value.trim() !== '')
+      || (Date.now() - started < 2500)
+      || /(maxxspace|mailinator|guerrillamail|tempmail|10minutemail)\./i.test(email);
+
+    const finish = (label) => {
+      btn.textContent = label;
+      btn.style.opacity = '';
+      btn.disabled = false;
+      setTimeout(() => { btn.textContent = original; }, 4000);
+    };
+
+    if (isBot) {
+      form.reset();
+      finish(okLabel);
+      return;
+    }
+
     btn.textContent = sendingLabel;
     btn.style.opacity = '0.7';
     btn.disabled = true;
@@ -154,17 +174,11 @@ function bindAjaxForm(form, sendingLabel, okLabel) {
       });
       const result = await response.json().catch(() => ({}));
       const ok = response.ok && result.success !== false && result.success !== 'false';
-      btn.textContent = ok ? okLabel : 'Greška pri slanju ✕';
       if (ok) form.reset();
+      finish(ok ? okLabel : 'Greška pri slanju ✕');
     } catch (error) {
-      btn.textContent = 'Greška pri slanju ✕';
+      finish('Greška pri slanju ✕');
     }
-
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.style.opacity = '';
-      btn.disabled = false;
-    }, 4000);
   });
 }
 
